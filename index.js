@@ -6,6 +6,7 @@ const puerto = process.env.PORT || 8000
 app.use(express.static(path.join(__dirname,'build')))
 
 app.get('/pdf/CV.pdf', (req, res) => res.download(path.join(__dirname,'CV.pdf')))
+app.get('/jose_public.pem', (req, res) => res.download(path.join(__dirname,'jose_public.pem')))
 
 app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname,'build','index.html'))
